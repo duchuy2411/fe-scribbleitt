@@ -1,13 +1,14 @@
 import React, { useContext, createContext } from 'react';
 import logo from './logo.svg';
-import Canvas from './features/canvas/Canvas';
+import Canvas from './features/canvas';
+import Login from './features/login/index';
 import './App.css';
 
 import { SocketContext } from './context';
 
 import { io } from 'socket.io-client';
 
-const socket = io("http://localhost:3000", { transports : ['websocket'] });
+const socket = io("192.168.1.14:3000", { transports : ['websocket'] });
 
 function App() {
   return (
